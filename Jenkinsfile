@@ -1,7 +1,6 @@
 node {
     stage 'Checkout'
-    git credentialsId: 'trasukg-bitbucket', 
-      url: 'git@bitbucket.org:trasukg/simplegreeting.git'
+    checkout scm
     
     stage 'Maven build'
     bat 'mvn -Dmaven.test.failure.ignore install'
