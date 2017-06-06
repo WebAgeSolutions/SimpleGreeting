@@ -1,4 +1,4 @@
-node('linux') {
+node {
     stage 'Checkout'
     checkout scm
     
