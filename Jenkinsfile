@@ -3,7 +3,7 @@ node {
     checkout scm
     
     stage 'Maven build'
-    sh 'mvn -Dmaven.test.failure.ignore install'
+    bat 'mvn -Dmaven.test.failure.ignore install'
     
     stage 'Archive Test Results'
     step([$class: 'JUnitResultArchiver',
@@ -19,6 +19,6 @@ def response= input message: 'Is this build good to go?',
 if(response=="Yes") {
  node {
   stage 'Deploy'
-  sh 'mvn -Dmaven.test.failure.ignore install'
+  bat 'mvn -Dmaven.test.failure.ignore install'
  }	
 }
