@@ -8,7 +8,7 @@ import com.simple.Greeting;
 public class TestGreeting {
 
 	@Test
-	public void testLengthOfTheUniqueKey() {
+	public void testGreeting() {
 
 		Greeting msg = new Greeting();
 		Assert.assertEquals("GOOD", msg.getStatus());
