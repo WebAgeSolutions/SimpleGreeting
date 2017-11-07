@@ -13,4 +13,9 @@ public class TestGreeting {
 		Greeting msg = new Greeting();
 		Assert.assertEquals("GOOD", msg.getStatus());
 	}
+	
+	@Test
+	public void testMain() {
+		Greeting.main(new String[0]);
+	}
 }
