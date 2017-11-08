@@ -1,5 +1,5 @@
 node {
-    stage 'Checkout'
+    stage 'Checkout from scm'
     checkout scm
     
     stage 'Maven build'
